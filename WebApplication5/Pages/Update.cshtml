@@ -1,0 +1,36 @@
+﻿
+@page
+@model WebApplication5.Pages.UpdateModel
+@{
+}
+<form method="post">
+    <div class="form-group">
+        <span asp-validation-for="Id" class="text-danger"></span>
+        <label for="name">Name:</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="author">Author:</label>
+        <input asp-for="Author" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="style">Style:</label>
+        <input asp-for="Style" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+<style>
+    body {
+        background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    }
+    label,a{
+        color:white;
+        font-size:24px;
+    }
+</style>

@@ -1,0 +1,67 @@
+﻿@page
+@model WebApplication5.Pages.FilmsModel
+@{
+}
+<body>
+	<div style="width:100vh;">
+		<p><img src="Images/icons8_film_reel_480px.png" width="100px;"/></p>
+		<h1 style="color:white;">Sesions</h1>
+		<div class="List">
+			<ul class="ul-style">
+				@foreach (var film in Model.films)
+				{
+
+					<li class="li-style">@film.Name - @film.Author - @film.Style - @film.Description <a asp-page="./Details" class="button" asp-route-id=@film.Id>Details</a> <a asp-page="./Update" class="button" asp-route-id=@film.Id>Update</a> <a asp-page="./Delete" class="button" asp-route-id=@film.Id>Delete</a> </li>
+
+					
+				}
+			</ul>
+		</div>
+		<a asp-page="./Add" class="button" >Add film</a> 
+	</div>
+</body>
+
+<style>
+	.ul-style {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		background: rgb(238,174,202);
+		background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	}
+	.li-style {
+		width:1000px;
+		display: block;
+		padding: 10px;
+		margin-bottom: 5px;
+		background-color: #f2f2f2;
+		border-radius: 5px;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+		transition: all 0.3s ease;
+	}
+
+		.li-style:hover {
+			background-color: #ddd;
+			transform: scale(1.05);
+		}
+
+	.button:hover {
+		color: white;
+	}
+	.button {
+		padding:5px;
+		display: inline-block;
+		background-color: #7b38d8; 
+		width: 100px;
+		color: #ffffff;
+		text-align: center;
+		border: 4px double #cccccc;
+		border-radius: 10px;
+		font-size: 14px;
+		cursor: pointer; 
+		margin: 5px; 
+		height: 45px;
+	}
+</style>

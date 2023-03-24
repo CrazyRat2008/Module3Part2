@@ -1,0 +1,35 @@
+﻿@page
+@model WebApplication5.Pages.DeleteModel
+@{
+}
+<form method="post" asp-antiforgery="true">
+	<p>
+	<p>
+		<label asp-for="Id">@Model.Id </label><br /> 
+	</p>
+	<p>
+		<label asp-for="Name">@Model.Name </label><br /> 
+	</p>
+	<p>
+		<label asp-for="Description">@Model.Description </label><br /> 
+	</p>
+	<p>
+		<label asp-for="Author">@Model.Author </label><br /> 
+	</p>
+	<p>
+		<label asp-for="Style">@Model.Style </label><br /> 
+	</p>
+	</p>
+	<input type="submit" value="Delete" />
+</form>
+<style>
+    body {
+        background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    }
+
+	label,a{
+        color:white;
+        font-size:24px;
+    }
+</style>

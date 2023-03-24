@@ -1,0 +1,38 @@
+﻿@page "{id:int}"
+@model WebApplication5.Pages.DetailsModel
+@{
+	ViewData["Title"] = "Details";
+}
+<h3>@Model.film.Name</h3>
+<h3>@Model.film.Description</h3>
+<h3>@Model.film.Author</h3>
+<h3>@Model.film.Style</h3>  
+<a asp-page="./Films" class="button">Home</a>
+<style>
+
+	body {
+		background: rgb(238,174,202);
+		background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	}
+	h3{
+		color:white;
+	}
+
+	.button {
+		padding: 5px;
+		display: inline-block;
+		background-color: #7b38d8; 
+		width: 100px;
+		height:45px;
+		color: #ffffff;
+		text-align: center;
+		border: 4px double #cccccc;
+		border-radius: 10px;
+		font-size: 14px;
+		cursor: pointer; 
+		margin: 5px;  
+	}
+	.button:hover{
+		color:white;
+	}
+</style>
